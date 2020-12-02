@@ -1,4 +1,4 @@
-FROM python:3.8-slim
+FROM ubuntu:latest
 
 WORKDIR \Users\kilia\pythonProject\python\docker
 COPY . .
