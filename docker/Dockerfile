@@ -1,5 +1,15 @@
-FROM python:3.8
+FROM python:3.8-slim
 
-COPY requirements.txt .
+WORKDIR \Users\kilia\pythonProject\python\docker
+COPY . .
 
-RUN pip install -r requirements.txt
+RUN apt-get update
+RUN apt-get install -y python3
+RUN apt-get install -y python3-pip
+RUN apt-get install -y vim
+ 
+RUN pip3 install -r ./requirements.txt
+
+EXPOSE 5000
+
+CMD ["python3","./app.py"]

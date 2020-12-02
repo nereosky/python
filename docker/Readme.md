@@ -3,7 +3,7 @@ build : Cette commande permet la création d'une image à partir d'un Dockerfile
 
 run : Cette commande permet de définir les ressources utilisées par le conteneur. La commande doit sépcifier une IMAGE.
 
-exec : Cette commande permet d'executer une commande dans le conteneur en cours d'utilisation. Une commande lancée de cette manière n'est pas redémarrée si le conteneur est relancé.
+exec : Cette commande permet d'executer une commande dans le conteneur en cours d'utilisation. Une commande lancée de cette manière n'est pas redémarrée si le conteneur est relancé.0+0+
 
 Les containers: Un conteneur est un processus isolé des autres processus de la machine hôte.
 
