@@ -1,10 +1,25 @@
+les commandes dans le dockerfile:
 
-build : Cette commande permet la création d'une image à partir d'un Dockerfile et d'un "contexte". Le contexte représente l'ensemble des fichiers se troiuvant dans le répertoie ou à l'adresse indiquée.
+la commande FROM:
+la fonction pour appeler une image qui servira de base a l'application
+la commande run:
+(on peut en faire plusieurs) commande pour créer l'application.
+la commande copy:
+permet de copier vers la position indiquée
+la commande expose:
+c'est pour spécifier le port qu'on va utiliser
+la commande cmd:
+commande que l'on veut executer dans le conteneur
 
-run : Cette commande permet de définir les ressources utilisées par le conteneur. La commande doit sépcifier une IMAGE.
+les commandes dans le terminal/ cmd
+docker build permet de faire une image depuis le conteneur indiqué
+docker run permet d'instancier une image
+docker exec pour lancer une commande sur le conteneur
+docker ps pour savoir quels sont les conteneurs qui tournent
+docker images pour afficher les images qu'on a recup
 
-exec : Cette commande permet d'executer une commande dans le conteneur en cours d'utilisation. Une commande lancée de cette manière n'est pas redémarrée si le conteneur est relancé.0+0+
-
-Les containers: Un conteneur est un processus isolé des autres processus de la machine hôte.
-
-Les images: Quand un conteneur est actif, il utilise un système isolé. Ce système est fourni par l'image du conteneur. L'image doit contenir tout ce qui est nécessaire au fonctionnement de l'application ainsi que différents configuratuions pour le conteneur tels que les variables d'environnement et différentes métadonnées.
+exemple :
+docker build -t [nom du fichier]:01 .
+docker run -d -p 5000:5000 [nom du fichier]:01
+docker exec -it [le retour du run] /bin/bash
+docker logs [id renvoyé par le build]

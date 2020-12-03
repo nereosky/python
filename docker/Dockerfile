@@ -9,6 +9,7 @@ RUN apt-get install -y python3-pip
 RUN apt-get install -y vim
  
 RUN pip3 install -r ./requirements.txt
+RUN apt-get clean
 
 EXPOSE 5000
 
