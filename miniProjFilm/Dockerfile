@@ -1,11 +1,16 @@
-FROM python:3.6-slim
+FROM ubuntu:latest
 
-WORKDIR Users\kilia\pythonProject\python\miniProjFilm
-
+WORKDIR \Users\kilia\pythonProject\python\miniProjFilm
 COPY . .
 
-RUN pip install -r requirements.txt
+RUN apt-get update
+RUN apt-get install -y python3
+RUN apt-get install -y python3-pip
+RUN apt-get install -y vim
+ 
+RUN pip3 install -r ./requirements.txt
+RUN apt-get clean
 
 EXPOSE 5000
 
-CMD ["python","./film.py"]
+CMD ["python3","./film.py"]
