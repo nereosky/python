@@ -1,16 +1,11 @@
-FROM ubuntu:latest
+FROM alpine:latest
 
-WORKDIR \Users\kilia\pythonProject\python\miniProjFilm
+RUN apk update && apk add python3 && apk add py3-pip
+
 COPY . .
 
-RUN apt-get update
-RUN apt-get install -y python3
-RUN apt-get install -y python3-pip
-RUN apt-get install -y vim
- 
-RUN pip3 install -r ./requirements.txt
-RUN apt-get clean
+RUN pip3 install -r requirements.txt
 
 EXPOSE 5000
 
-CMD ["python3","./film.py"]
+CMD python3 film.py
