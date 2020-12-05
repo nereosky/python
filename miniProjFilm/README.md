@@ -1,7 +1,7 @@
 # Project médiatèque
 
 ## Lien de Heroku
--> https://kilian-longepe-film.herokuapp.com/
+-> https://kilian-longepe-film.herokuapp.com
 
 ## Objectif du mini Projet
 le projet sera une médiatèque comprenant un ceratin nombre de film avec une recherche de film par le titre.
