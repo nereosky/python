@@ -1,7 +1,14 @@
 class FeatureRecipe:
-    """ TODO : __init__ """
-
-    def separate_variable_types(self) -> None:
+    
+    def __init__(self,df:pd.DataFrame):
+        
+        self.df = df
+        self.cate = []
+        self.floa = []
+        self.intt = []
+        self.drop = []
+        
+    def separate_variable_types(self):
         """ TODO : Diviser les types de variables dans un tableau """
         pass
     
